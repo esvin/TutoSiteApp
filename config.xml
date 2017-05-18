@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="io.ionic.conferenceapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Ionic Conference</name>
+<widget id="tuto.site.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>TutoSite</name>
   <description>
-        An Ionic Framework application for the Ionic Conference.
+        An aplication to link people for learning and earning of and from knowledge
   </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="jelou@oktacore" href="http://oktacore.com/">
+      Jose Estrada
   </author>
   <content src="index.html"/>
   <access origin="*"/>

@@ -5,6 +5,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Storage } from '@ionic/storage';
 
+import { HomePage } from '../pages/home/home';
+import { LinksPage } from '../pages/links/links';
+import { ProfilePage } from '../pages/profile/profile';
+import { RegisterPage } from '../pages/register/register';
+
 import { AboutPage } from '../pages/about/about';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
@@ -47,6 +52,14 @@ export class ConferenceApp {
     { title: 'Map', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' },
     { title: 'About', name: 'TabsPage', component: TabsPage, tabComponent: AboutPage, index: 3, icon: 'information-circle' }
   ];
+
+  appLinks: PageInterface[] = [
+    { title: 'Home', name: 'HomePage', component: HomePage,  icon: 'calendar' },
+    { title: 'Links', name: 'LinksPage', component: LinksPage, icon: 'contacts' },
+    { title: 'Profile', name: 'ProfilePage', component: ProfilePage, icon: 'map' },
+    { title: 'Register', name: 'RegisterPage', component: RegisterPage, icon: 'information-circle' }
+  ];
+
   loggedInPages: PageInterface[] = [
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
@@ -73,7 +86,7 @@ export class ConferenceApp {
     this.storage.get('hasSeenTutorial')
       .then((hasSeenTutorial) => {
         if (hasSeenTutorial) {
-          this.rootPage = TabsPage;
+          this.rootPage = HomePage;
         } else {
           this.rootPage = TutorialPage;
         }

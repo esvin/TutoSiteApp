@@ -67,3 +67,102 @@
     }
   }
 }
+/** -------------------- MENU CSS ----------------- **/
+ion-menu {
+  .scroll-content {
+    overflow-y: auto;
+    background: #ffffff !important;
+  }
+
+  .spark-img {
+    background: black;
+    height: 75px;
+    width: 75px;
+    padding: 10px;
+    border-radius: 75px;
+    min-height: 75px;
+    min-width: 75px;
+  }
+
+  ion-grid {
+    background: color($tutosite, gris-menu);
+    padding: 0px;
+  }
+
+  ion-row {
+    min-width: 260px;
+  }
+
+  ion-label {
+    margin: 2.5px 0px 2.5px 0px !important;
+    font-size: 16px;
+  }
+  
+  ion-label, ion-icon {
+    color: color($tutosite, color-texto);
+  }
+
+  ion-list {
+    margin-top: 16px !important;
+  }
+
+  button.item-ios:not([detail-none]) .item-inner {
+    background-image: none;
+  }
+
+  ion-select {
+    padding-left: 0px !important;
+    min-width: 100% !important;
+  }
+  
+  .sub {
+    font-size: 12px;
+    color: color($tutosite, gris-texto);
+  }
+
+  .spark-col {
+    max-width: 85px;
+    margin: 18px 6px 18px 6px;
+  }
+
+  .button-col {
+    max-width: 48px;
+    padding: 0px;
+  }
+
+  .info-col {
+    max-width: 115px;
+  }
+
+  .menu-button {
+    margin-top: -90px !important;
+  }
+
+  .item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .item-inner {
+    margin-left: 8px !important;
+    padding-right: 16px !important;
+  }
+
+  .logout-item {
+    position: absolute;
+    bottom: 0;
+    width: $menu-w;
+  }
+
+  .notif-count {
+    right: 16px;
+    position: absolute;
+    top: 20px;
+    color: color($tutosite, notif-rojo);
+  }
+
+
+
+
+
+}

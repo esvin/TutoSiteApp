@@ -11,6 +11,18 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { ConferenceApp } from './app.component';
 
+
+import { HomePageModule } from '../pages/home/home.module';
+import { LinksPageModule } from '../pages/links/links.module';
+import { ProfilePageModule } from '../pages/profile/profile.module';
+import { RegisterPageModule } from '../pages/register/register.module';
+
+
+import { HomePage } from '../pages/home/home';
+import { LinksPage } from '../pages/links/links';
+import { ProfilePage } from '../pages/profile/profile';
+import { RegisterPage } from '../pages/register/register';
+
 import { AboutPage } from '../pages/about/about';
 import { PopoverPage } from '../pages/about-popover/about-popover';
 import { AccountPage } from '../pages/account/account';
@@ -28,6 +40,7 @@ import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { ApiServiceProvider } from '../providers/api-service/api-service';
 
 
 @NgModule({
@@ -53,7 +66,11 @@ import { UserData } from '../providers/user-data';
     HttpModule,
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
-        { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
+
+        { component: HomePage, name: 'HomePage', segment: 'homepage' },
+        { component: LinksPage, name: 'LinksPage', segment: 'linkspage' },
+        { component: RegisterPage, name: 'RegisterPage', segment: 'registerpage' },
+        { component: ProfilePage, name: 'ProfilePage', segment: 'profilepage' },
         { component: SchedulePage, name: 'Schedule', segment: 'schedule' },
         { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:name' },
         { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
@@ -68,7 +85,11 @@ import { UserData } from '../providers/user-data';
         { component: SignupPage, name: 'SignupPage', segment: 'signup' }
       ]
     }),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    HomePageModule,
+    LinksPageModule,
+    ProfilePageModule,
+    RegisterPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -93,7 +114,8 @@ import { UserData } from '../providers/user-data';
     ConferenceData,
     UserData,
     InAppBrowser,
-    SplashScreen
+    SplashScreen,
+    ApiServiceProvider
   ]
 })
 export class AppModule { }
