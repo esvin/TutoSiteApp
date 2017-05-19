@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Observable } from "rxjs/Observable";
 
 /*
   Generated class for the ApiServiceProvider provider.
@@ -12,7 +13,11 @@ import 'rxjs/add/operator/map';
 export class ApiServiceProvider {
 
   constructor(public http: Http) {
-    console.log('Hello ApiServiceProvider Provider');
+  }
+
+  getProfileInf(): Observable<any>
+  {
+    return null;
   }
 
 }

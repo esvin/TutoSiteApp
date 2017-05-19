@@ -1,3 +1,27 @@
 page-profile {
+    .header-md::after{
+        background: transparent!important;
+    }
+    .toolbar-background{
+        border-color: transparent!important;
+        background: transparent!important;
+    }
+    .scroll-content{
+        margin-top: 0px!important;
+        overflow-y: auto;
+    }
+    .card-md {
+        margin: 0px 0px 20px 0px!important;
+        width: 100%;
+    }
+    .prof-avatar{
+        position:absolute;
+        top:30%;
+        right:10%;
+        z-index:20;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
 
 }

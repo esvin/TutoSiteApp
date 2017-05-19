@@ -5,14 +5,38 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+  
 
   <ion-navbar>
-    <ion-title>profile</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-card>
+  <img src="assets/img/nin-live.png"/>
+  <ion-card-content>
+    <img class="prof-avatar" src="assets/img/thumbnail-terminator.png">
+    <ion-card-title>
+      Arnold Singer
+    </ion-card-title>
+    <ion-grid>
+      <ion-row justify-content-center>Ingeniero Ambiental</ion-row>
+      <ion-row justify-content-center>Mazatenango,Suchitepequez</ion-row>
+      <ion-row justify-content-center>
+        <ion-col text-right><button ion-button>Follow</button></ion-col>
+        <ion-col text-left><button ion-button outline>Message</button></ion-col>
+        </ion-row>
+    </ion-grid>
+    <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+</ion-card>
 
 </ion-content>
