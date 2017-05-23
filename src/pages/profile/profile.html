@@ -17,7 +17,7 @@
 
 
 <ion-content>
-  <ion-card>
+  <ion-card class="cover">
   <img src="assets/img/nin-live.png"/>
   <ion-card-content>
     <img class="prof-avatar" src="assets/img/thumbnail-terminator.png">
@@ -33,10 +33,108 @@
         </ion-row>
     </ion-grid>
     <p>
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
+      The most popular industrial 
     </p>
-  </ion-card-content>
-</ion-card>
+    </ion-card-content>
+  </ion-card>
+  <ion-segment [(ngModel)]="displayInf">
+      <ion-segment-button value="personal">
+        Información Personal
+      </ion-segment-button>
+      <ion-segment-button value="comments">
+        Comentarios
+      </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="displayInf">
+    <ion-list *ngSwitchCase="'personal'">
+      <ion-card>
+        <ion-card-header>
+          Educación
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label>Centro Educativo</ion-label>
+              <ion-input type="text" value="USAC"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Titulo</ion-label>
+              <ion-input type="text" value="Ingenieria en Ciencias y Sistemas"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Inicio</ion-label>
+              <ion-input type="text" value="2012"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Fin</ion-label>
+              <ion-input type="text" value="2016"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          Experiencia
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label>Empresa</ion-label>
+              <ion-input type="text" value="BDGSA"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Puesto</ion-label>
+              <ion-input type="text" value="Desarrollador web"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Inicio</ion-label>
+              <ion-input type="text" value="2012"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Fin</ion-label>
+              <ion-input type="text" value="2016"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      
+    </ion-list>
+    <ion-list *ngSwitchCase="'comments'">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="assets/img/avatar-finn.png">
+        </ion-avatar>
+        <h2>Jose Perez</h2>
+        <h3>12 Febrero, 2016</h3>
+        <p>Excelente didactica</p>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="assets/img/avatar-luke.png">
+        </ion-avatar>
+        <h2>Pedro Nuñez</h2>
+        <h3>15 Junio, 2016</h3>
+        <p>Un tutor muy paciente</p>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="assets/img/avatar-rey.png">
+        </ion-avatar>
+        <h2>Julia Garcia</h2>
+        <h3>03 Enero, 2017</h3>
+        <p>Muy bueno, necesitaba apoyo</p>
+      </ion-item>      
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="assets/img/avatar-han.png">
+        </ion-avatar>
+        <h2>Armando Paz</h2>
+        <h3>12 Octubre, 2016</h3>
+        <p>Aprendí bastante</p>
+      </ion-item>
+  </ion-list>
+
+  </div>
 
 </ion-content>

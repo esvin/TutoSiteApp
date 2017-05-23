@@ -1,4 +1,5 @@
 page-profile {
+    
     .header-md::after{
         background: transparent!important;
     }
@@ -9,9 +10,14 @@ page-profile {
     .scroll-content{
         margin-top: 0px!important;
         overflow-y: auto;
+        background: #9E9E9E;
+    }
+    .cover {
+        margin: 0px 0px 20px 0px!important;
+        width: 100%;
     }
     .card-md {
-        margin: 0px 0px 20px 0px!important;
+        margin: 0px 0px 10px 0px!important; 
         width: 100%;
     }
     .prof-avatar{
@@ -22,6 +28,9 @@ page-profile {
         border-radius: 50%;
         width: 100px;
         height: 100px;
+    }
+    .ion-segment {
+        padding-bottom: 10px!important;
     }
 
 }
